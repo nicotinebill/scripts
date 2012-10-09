@@ -1,0 +1,5 @@
+#!/bin/bash 
+FFOXPID=$(ps -ef | grep firefox | grep -v grep | awk '{print $2;}')
+if [ ! -z "$FFOXPID" ];then
+    kill $FFOXPID
+fi
